@@ -28,7 +28,7 @@ div {
     li {
       text-align: center;
       width: 50%;
-      margin: 10%;
+      margin: 1%;
       img {
         width: 10vw;
       }

@@ -1,9 +1,9 @@
 <template>
   <div class="content">
-    <div class="contentTitle">
+    <!-- <div class="contentTitle">
       <h2 :class="{skew:$store.state.isSkew}" :contentTitle="contentTitle">{{ contentTitle }}</h2>
-    </div>
-    <div class="group">
+    </div> -->
+    <div class="group" v-parallax="0.4">
       <img :src="contentImg" alt="" :contentImg="contentImg" class="img" />
       <div class="text">
         <!-- <p :contentTextH1="contentTextH1" class="name">{{ contentTextH1 }}</p> -->
@@ -52,7 +52,7 @@ export default {
     h2 {
       margin: 4vh 0 4vh 0;
       text-align: center;
-      font-size: 2vh;
+      font-size: 2.4vh;
       letter-spacing: 10px;
     }
     .skew {
@@ -64,7 +64,7 @@ export default {
     height: auto;
   }
   .text {
-    font-size: 50%;
+    font-size: 75%;
     .name {
       text-align: center;
     }
@@ -123,10 +123,10 @@ export default {
       width: 50%;
     }
     .name {
-      font-size: 75%;
+      font-size: 85%;
     }
     .text {
-      font-size: 75%;
+      font-size: 85%;
     }
   }
 }

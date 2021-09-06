@@ -12,9 +12,9 @@ export default {
 
 <style lang="scss" scoped>
   h2 {
-      margin: 4vh 0 0 0;
+      margin: 4vh 0 4vh 0;
       text-align: center;
-      font-size: 2vh;
+      font-size: 2.4vh;
       letter-spacing: 10px;
   }
   .skew {

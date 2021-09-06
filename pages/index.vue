@@ -1,12 +1,15 @@
 <template>
   <div>
-    <Title class="title" id="top"/>
+    <Title class="title" id="top" />
     <TopImage v-if="show.topImage" :moveMessages="moveMessages" />
     <transition name="fade">
       <Logo v-if="show.logo" :logo="logo.top" />
     </transition>
     <Spacer />
-    
+    <ContentTitle 
+    :contentTitle="contentTitle.profile" 
+    v-if="show.logo"
+    />
     <transition name="fade">
       <Profile
         class="profile"
@@ -19,10 +22,13 @@
       />
     </transition>
     <Spacer />
+    <ContentTitle 
+    :contentTitle="contentTitle.works" 
+    v-if="show.logo"
+    />
     <transition name="fade">
       <Works
         class="works"
-        v-parallax="0.2"
         id="works"
         v-if="show.logo"
         :contentTitle="contents.works.title"
@@ -31,22 +37,26 @@
         :contentTextP="contents.works.textP"
       />
     </transition>
+    <Spacer />
     <transition name="fade">
-    <Slider 
-      v-if="show.logo"
-      :per-page="1"
-      :autoplay="true"
-      :loop="true"
-      :pagination-padding="10"
-      :autoplay-timeout="2000"
-      :speed="1000"
-    />
+      <Slider
+        v-if="show.logo"
+        :per-page="1"
+        :autoplay="true"
+        :loop="true"
+        :pagination-padding="10"
+        :autoplay-timeout="2000"
+        :speed="1000"
+      />
     </transition>
     <Spacer />
+    <ContentTitle 
+    :contentTitle="contentTitle.contact" 
+    v-if="show.logo"
+    />
     <transition name="fade">
       <Contact
         class="contact"
-        v-parallax="0.2"
         id="contact"
         v-if="show.logo"
         :contentTitle="contents.contact.title"
@@ -56,21 +66,22 @@
         :logos="snsLogo"
       />
     </transition>
+    <Spacer />
     <transition name="fade">
-      <Sns v-if="show.logo" :snsLogo="snsLogo"  />
+      <Sns v-if="show.logo" :snsLogo="snsLogo" />
     </transition>
   </div>
 </template>
 
 <script>
-import Carousel from '../components/Slider.vue';
+import Carousel from "../components/Slider.vue";
 import Logo from "../components/Logo.vue";
 import Works from "../components/Works.vue";
-import Hamburger from '../components/Hamburger.vue';
+import Hamburger from "../components/Hamburger.vue";
 export default {
   transition: {
     name: "fade",
-    mode: 'out-in'
+    mode: "out-in",
   },
   components: { Logo, Works, Carousel, Hamburger },
   data() {
@@ -94,6 +105,11 @@ export default {
           url: "https://www.instagram.com/kazutaka.nakamura.376/",
         },
       ],
+      contentTitle: {
+        profile: "Profile",
+        works: "Works",
+        contact: "Contact",
+      },
       contents: {
         profile: {
           title: "Profile",
@@ -153,13 +169,21 @@ export default {
 body {
   margin: 0;
 }
-.fade-enter-active, .fade-leave-active  {
-  transition: opacity .6s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.6s;
 }
-.fade-enter, .fade-leave-to {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
-
-
-
+.profile,
+.works,
+.contact {
+  background-image: url('~/assets/images/nuxt.png');
+  background-size: cover;
+  background-size: 150px;
+  background-color:rgba(255,255,255,.8);
+  background-blend-mode:lighten;
+}
 </style>
