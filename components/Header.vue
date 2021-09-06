@@ -17,7 +17,7 @@ export default {
         {
           title: "TOP",
           isHover: false,
-          url: "/",
+          url: "/#top",
           // dataText: "TOP",
         },
         {

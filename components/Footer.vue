@@ -1,6 +1,6 @@
 <template>
   <div >
-    <p>OrientAssociation</p>
+    <p>KAZUTAKA NAKAMURA</p>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {};
 <style lang="scss" scoped>
 div {
   p {
-    font-size: 10px;
+    font-size: 8%;
     color: aliceblue;
     background: black;
     padding: 8%;

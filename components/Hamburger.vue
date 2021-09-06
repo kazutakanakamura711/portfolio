@@ -1,18 +1,18 @@
 <template>
-  <div>
+  <div class="hamburger">
     <div class="header">
       <!-- <div class="logo">
         <h1>KAZUTAKA</h1>
       </div> -->
       <div class="sp-menu">
-        <span class="material-icons" id="open" @click="menuOpen">menu</span>
+        <span :class="{'material-icons':true, hide:isHide}" id="open" @click="OpeningAndClosing">menu</span>
       </div>
     </div>
-    <div class="overlay">
-      <span class="material-icons" id="close" @click="menuClose">close</span>
+    <div :class="{overlay:isOverlay, show:isShow}">
+      <span class="material-icons" id="close" @click="OpeningAndClosing">close</span>
       <nav>
         <ul>
-          <li v-for="(title, i) in titles" :key="i" class="skew" @click="test">
+          <li v-for="(title, i) in titles" :key="i" class="skew" @click="OpeningAndClosing">
             <nuxt-link :to="title.url" >{{ title.title }}</nuxt-link>
           </li>
         </ul>
@@ -25,11 +25,14 @@
 export default {
   data() {
     return {
+      isOverlay: true,
+      isShow: false,
+      isHide: false,
       titles: [
         {
           title: "TOP",
           isHover: false,
-          url: "/",
+          url: "/#top",
           // dataText: "TOP",
         },
         {
@@ -54,33 +57,11 @@ export default {
     };
   },
   methods: {
-    menuOpen() {
-      const open = document.getElementById("open");
-      const overlay = document.querySelector(".overlay");
-      const close = document.getElementById("close");
-      overlay.classList.add("show");
-      open.classList.add("hide");
-      close.addEventListener("click", () => {
-        overlay.classList.remove("show");
-        open.classList.remove("hide");
-      });
+    OpeningAndClosing() {
+      this.isShow = !this.isShow
+      this.isHide = !this.isHide
       this.$store.commit("switchSkew");
     },
-    menuClose() {
-      const open = document.getElementById("open");
-      const overlay = document.querySelector(".overlay");
-      const close = document.getElementById("close");
-      overlay.classList.add("show");
-      open.classList.add("hide");
-      close.addEventListener("click", () => {
-        overlay.classList.remove("show");
-        open.classList.remove("hide");
-      });
-      this.$store.commit("switchSkew");
-    },
-    test() {
-      console.log('test')
-    }
   },
 };
 </script>

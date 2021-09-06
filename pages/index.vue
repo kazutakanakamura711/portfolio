@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Title class="title" />
+    <Title class="title" id="top"/>
     <TopImage v-if="show.topImage" :moveMessages="moveMessages" />
     <transition name="fade">
       <Logo v-if="show.logo" :logo="logo.top" />

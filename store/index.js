@@ -7,6 +7,5 @@ export const state = (() => {
 export const mutations = {
   switchSkew(state) {
     state.isSkew = !state.isSkew
-    console.log('fdfsf')
   }
 }
