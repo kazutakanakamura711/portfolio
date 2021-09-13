@@ -27,6 +27,7 @@ export default {
     '~plugins/vue-scrollto',
     { src: '~/plugins/vue-carousel', ssr: false },
     { src :'~/plugins/vue-parallax-js', ssr: false },
+    // { src :'~/plugins/vue-rellax', ssr: false },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

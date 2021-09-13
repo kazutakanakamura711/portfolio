@@ -6,10 +6,7 @@
       <Logo v-if="show.logo" :logo="logo.top" />
     </transition>
     <Spacer />
-    <ContentTitle 
-    :contentTitle="contentTitle.profile" 
-    v-if="show.logo"
-    />
+    <ContentTitle :contentTitle="contentTitle.profile" v-if="show.logo" />
     <transition name="fade">
       <Profile
         class="profile"
@@ -21,11 +18,11 @@
         :contentTextP="contents.profile.textP"
       />
     </transition>
-    <Spacer />
-    <ContentTitle 
-    :contentTitle="contentTitle.works" 
-    v-if="show.logo"
-    />
+    <transition name="fade">
+      <Img v-if="show.logo" v-parallax="0.1" class="img" :img="imgs" />
+    </transition>
+    <!-- <Spacer /> -->
+    <ContentTitle :contentTitle="contentTitle.works" v-if="show.logo" />
     <transition name="fade">
       <Works
         class="works"
@@ -37,7 +34,6 @@
         :contentTextP="contents.works.textP"
       />
     </transition>
-    <Spacer />
     <transition name="fade">
       <Slider
         v-if="show.logo"
@@ -49,11 +45,11 @@
         :speed="1000"
       />
     </transition>
-    <Spacer />
-    <ContentTitle 
-    :contentTitle="contentTitle.contact" 
-    v-if="show.logo"
-    />
+    <transition name="fade">
+      <Img v-if="show.logo" v-parallax="0.1" class="img" :img="imgs" />
+    </transition>
+
+    <ContentTitle :contentTitle="contentTitle.contact" v-if="show.logo" />
     <transition name="fade">
       <Contact
         class="contact"
@@ -66,7 +62,6 @@
         :logos="snsLogo"
       />
     </transition>
-    <Spacer />
     <transition name="fade">
       <Sns v-if="show.logo" :snsLogo="snsLogo" />
     </transition>
@@ -86,6 +81,7 @@ export default {
   components: { Logo, Works, Carousel, Hamburger },
   data() {
     return {
+      imgs: require("~/assets/images/railroadCrossing.png"),
       msg: "KAZUTAKANAKAMURA",
       moveMessages: [],
       show: {
@@ -93,7 +89,7 @@ export default {
         topImage: true,
       },
       logo: {
-        top: require("~/assets/images/kazutaka.png"),
+        top: require("~/assets/images/firstCollage.jpg"),
       },
       snsLogo: [
         {
@@ -113,21 +109,21 @@ export default {
       contents: {
         profile: {
           title: "Profile",
-          img: require("~/assets/images/_DSC1805.jpg"),
+          img: require("~/assets/images/profileImg.jpg"),
           textH1: "KAZUTAKA NAKAMURA",
           textP:
             "はじめまして。愛媛県を拠点にWebエンジニアとして活動させていただいております中村と申します。印刷会社を退社後フリーにてWeb制作をさせていただいております。最近はドローンに興味を持っており、空撮などのスキルを身に付けている最中です。",
         },
         works: {
           title: "Works",
-          img: require("~/assets/images/programming.jpg"),
+          img: require("~/assets/images/crane.png"),
           textH1: "",
           textP:
             "制作物です。神経衰弱やスロットは実際に遊べますので触っていただけたらと思います。今後はドローンを使用した空撮などを含めた制作を行っていこうと思います。",
         },
         contact: {
           title: "Contact",
-          img: require("~/assets/images/4953190_m.jpg"),
+          img: require("~/assets/images/contact.png"),
           textH1: "KAZUTAKA NAKAMURA",
           textP:
             "お問い合わせはTwitterまたはInstagramのDMからお願いいたします。",
@@ -177,13 +173,28 @@ body {
 .fade-leave-to {
   opacity: 0;
 }
-.profile,
-.works,
-.contact {
-  background-image: url('~/assets/images/nuxt.png');
-  background-size: cover;
-  background-size: 150px;
-  background-color:rgba(255,255,255,.8);
-  background-blend-mode:lighten;
+
+// .profile,
+// .works,
+// .contact {
+//   background-image: url('~/assets/images/dot.jpg');
+//   background-size: cover;
+//   background-size: 150px;
+//   background-color:rgba(255,255,255,.8);
+//   background-blend-mode:lighten;
+// }
+// body {
+//   background-image: url('~/assets/images/dot.jpg');
+//   background-size: cover;
+//   background-size: 150px;
+//   background-color:rgba(255,255,255,.8);
+//   background-blend-mode:lighten;
+// }
+
+@media screen and(min-width:480px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+@media screen and (min-width: 1024px) {
 }
 </style>

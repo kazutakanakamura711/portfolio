@@ -19,7 +19,7 @@ div {
   display: flex;
   align-items: flex-start;
   .topImg {
-    width: 64%;
+    width: 92%;
     margin: 22vh auto 4vh;
   }
   .skew {
@@ -70,7 +70,7 @@ div {
 @media screen and(min-width:480px) {
   div {
     .topImg {
-      width: 50%;
+      width: 64%;
       margin: 22vh auto 4vh;
     }
   }
@@ -78,7 +78,7 @@ div {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   div {
     .topImg {
-      width: 50%;
+      width: 64%;
       margin: 22vh auto 4vh;
     }
   }
@@ -86,7 +86,7 @@ div {
 @media screen and (min-width: 1025px) {
   div {
     .topImg {
-      width: 42%;
+      width: 64%;
       margin: 12vh auto 3vh;
     }
   }

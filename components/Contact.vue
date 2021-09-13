@@ -3,7 +3,7 @@
     <!-- <div class="contentTitle">
       <h2 :class="{skew:$store.state.isSkew}" :contentTitle="contentTitle">{{ contentTitle }}</h2>
     </div> -->
-    <div class="group" v-parallax="0.4">
+    <div class="group" >
       <img :src="contentImg" alt="" :contentImg="contentImg" class="img" />
       <div class="text">
         <!-- <p :contentTextH1="contentTextH1" class="name">{{ contentTextH1 }}</p> -->

@@ -33,8 +33,8 @@ div {
         width: 10vw;
       }
       img:hover {
-        transform:scale(1.5,1.5);
-        transition: .5s;
+        transform: scale(1.5, 1.5);
+        transition: 0.5s;
       }
     }
   }
@@ -45,22 +45,20 @@ div {
 }
 @media screen and (min-width: 1024px) {
   div {
-  ul {
-    padding: 0;
-    width: 100%;
-    display: flex;
-    list-style: none;
-    li {
-      text-align: center;
-      width: 50%;
-      margin: 12.5%;
-      img {
-        width: 8vw;
+    ul {
+      padding: 0;
+      width: 100%;
+      display: flex;
+      list-style: none;
+      li {
+        text-align: center;
+        width: 50%;
+        margin: 12.5%;
+        img {
+          width: 8vw;
+        }
       }
     }
   }
 }
-  
-}
-
 </style>
