@@ -42,8 +42,9 @@ export default {
     }
   }
   .img {
-    width: 100vw;
+    width: 80vw;
     height: auto;
+    margin: 0 10vw;
   }
   .text {
     font-size: 75%;
@@ -116,7 +117,9 @@ export default {
   .group {
     display: flex;
     .img {
-      width: 50%;
+      width: 25%;
+      height: 25%;
+      margin: 0 12.5%;
     }
     .name {
       font-size: 100%;

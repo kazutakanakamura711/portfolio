@@ -10,11 +10,17 @@
     >
       <slide>
         <div class="content">
-          <p>神経衰弱アプリ</p>
-          <a href="https://github.com/kazutakanakamura711/memoryWeakness"
-            >github</a
-          >
-          <p>Nuxt.js/Illustrator/GarageBand</p>
+          <p>
+            <a href="https://memory-weakness.herokuapp.com/"
+              >神経衰弱アプリ</a
+            >
+          </p>
+          <p>
+            <a href="https://github.com/kazutakanakamura711/memoryWeakness" target="”_blank”">
+              github
+            </a>
+          </p>
+          <p>Nuxt.js/Vue.js/Illustrator/GarageBand</p>
         </div>
         <a href="https://memory-weakness.herokuapp.com/" target="”_blank”">
           <img src="@/assets/images/nuxtMemoryWeakness.png" />
@@ -22,13 +28,19 @@
       </slide>
       <slide>
         <div class="content">
-          <p>スロットアプリ</p>
-          <a href="https://github.com/kazutakanakamura711/slotMaschine"
-            >github</a
-          >
-          <p>Nuxt.js/vuetify/Illustrator/GarageBand</p>
+          <p>
+            <a href="https://slot-maschine-nuxt.herokuapp.com/"
+              >スロットアプリ</a
+            >
+          </p>
+          <p>
+            <a href="https://github.com/kazutakanakamura711/slotMaschine" target="”_blank”">
+              github
+            </a>
+          </p>
+          <p>Nuxt.js/Vue.js/Illustrator/GarageBand</p>
         </div>
-        <a href="http://slot-maschine-nuxt.herokuapp.com/" target="”_blank”">
+        <a href="https://memory-weakness.herokuapp.com/" target="”_blank”">
           <img src="@/assets/images/nuxtSlot.png" />
         </a>
       </slide>
@@ -36,7 +48,7 @@
         <div class="content">
           <p>居酒屋HP</p>
           <s>github</s>
-          <p>Nuxt.js/vuetify</p>
+          <p>Nuxt.js/Vue.js/vuetify</p>
         </div>
         <a href="https://sankichi.herokuapp.com/" target="”_blank”">
           <img src="@/assets/images/sankichiDemo.png" />
@@ -74,10 +86,12 @@ export default {
     text-align: center;
   }
   a {
+    text-decoration: none;
     img {
-      margin: 5% 16.2% 10%;
-      width: 68%;
-      height: 54%;
+      cursor: pointer;
+      margin: 5% 22% 10%;
+      width: 56%;
+      height: 50%;
     }
   }
 }

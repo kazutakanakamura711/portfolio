@@ -21,6 +21,7 @@ export default {
 <style lang="scss" scoped>
 div {
   ul {
+    cursor: pointer;
     padding: 0;
     width: 100%;
     display: flex;
@@ -31,10 +32,10 @@ div {
       margin: 1%;
       img {
         width: 10vw;
-      }
-      img:hover {
-        transform: scale(1.5, 1.5);
-        transition: 0.5s;
+        &:hover {
+          transform: scale(1.5, 1.5);
+          transition: 0.3s;
+        }
       }
     }
   }

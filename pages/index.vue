@@ -19,9 +19,13 @@
       />
     </transition>
     <transition name="fade">
-      <Img v-if="show.logo" v-parallax="0.1" class="img" :img="imgs" />
+      <!-- <div class="sakuras">
+        <Img v-if="show.logo" v-parallax="0.1" class="sakura" :img="imgs[2]" />
+        <Img v-if="show.logo" v-parallax="0.2" class="sakura" :img="imgs[2]" />
+        <Img v-if="show.logo" v-parallax="0.1" class="sakura" :img="imgs[2]" />
+      </div> -->
     </transition>
-    <!-- <Spacer /> -->
+    <Spacer />
     <ContentTitle :contentTitle="contentTitle.works" v-if="show.logo" />
     <transition name="fade">
       <Works
@@ -41,14 +45,24 @@
         :autoplay="true"
         :loop="true"
         :pagination-padding="10"
-        :autoplay-timeout="2000"
+        :autoplay-timeout="2500"
         :speed="1000"
       />
     </transition>
     <transition name="fade">
-      <Img v-if="show.logo" v-parallax="0.1" class="img" :img="imgs" />
+      <!-- <Img
+        v-if="show.logo"
+        v-parallax="0.2"
+        class="railroadCrossing"
+        :img="imgs[0]"
+      /> -->
     </transition>
-
+    <!-- <div class="flowers">
+      <Img v-if="show.logo" v-parallax="0.2" class="flower" :img="imgs[1]" />
+      <Img v-if="show.logo" v-parallax="0.4" class="flower" :img="imgs[1]" />
+      <Img v-if="show.logo" v-parallax="0.3" class="flower" :img="imgs[1]" />
+    </div> -->
+    <Spacer />
     <ContentTitle :contentTitle="contentTitle.contact" v-if="show.logo" />
     <transition name="fade">
       <Contact
@@ -81,7 +95,10 @@ export default {
   components: { Logo, Works, Carousel, Hamburger },
   data() {
     return {
-      imgs: require("~/assets/images/railroadCrossing.png"),
+      imgs: [
+        require("~/assets/images/railroadCrossing.png"),
+        require("~/assets/images/flowerPink.png"),
+      ],
       msg: "KAZUTAKANAKAMURA",
       moveMessages: [],
       show: {
@@ -129,6 +146,11 @@ export default {
             "お問い合わせはTwitterまたはInstagramのDMからお願いいたします。",
         },
       },
+      slider: [
+        {
+          title: "神経衰弱アプリ",
+        },
+      ],
     };
   },
   methods: {
@@ -162,8 +184,11 @@ export default {
 </script>
 
 <style lang="scss" >
-body {
-  margin: 0;
+html {
+  scroll-behavior: smooth;
+  body {
+    margin: 0;
+  }
 }
 .fade-enter-active,
 .fade-leave-active {
@@ -172,6 +197,28 @@ body {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+div {
+  margin: 0 auto;
+  .flower,
+  .sakura {
+    img {
+      width: 25vw;
+      height: auto;
+      &:hover {
+        transform: rotate(20deg);
+      }
+    }
+  }
+}
+.flowers {
+  display: grid;
+  grid-template-columns: 33vw 1fr 33vw;
+}
+.sakuras {
+  display: grid;
+  grid-template-columns: 33vw 1fr 33vw;
 }
 
 // .profile,
@@ -184,10 +231,10 @@ body {
 //   background-blend-mode:lighten;
 // }
 // body {
-//   background-image: url('~/assets/images/dot.jpg');
+//   background-image: url('~/assets/images/flowerPink.png');
 //   background-size: cover;
 //   background-size: 150px;
-//   background-color:rgba(255,255,255,.8);
+//   background-color:rgba(255,255,255,.95);
 //   background-blend-mode:lighten;
 // }
 
@@ -196,5 +243,18 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 }
 @media screen and (min-width: 1024px) {
+  div {
+    margin: 0 auto;
+    .flower,
+    .sakura {
+      img {
+        width: 22vw;
+        height: auto;
+        &:hover {
+          transform: rotate(20deg);
+        }
+      }
+    }
+  }
 }
 </style>

@@ -6,7 +6,7 @@
     <transition name="fade">
       <Header v-show="isShow" class="menubar" />
     </transition>
-    <Nuxt  class="nuxt"/>
+    <Nuxt  class="nuxt" />
     <Footer />
   </div>
 </template>
