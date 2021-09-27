@@ -32,9 +32,9 @@ div {
       margin: 1%;
       img {
         width: 10vw;
+        transition: 0.3s;
         &:hover {
           transform: scale(1.5, 1.5);
-          transition: 0.3s;
         }
       }
     }

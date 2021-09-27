@@ -42,9 +42,9 @@ export default {
     }
   }
   .img {
-    width: 80vw;
+    width: 68vw;
     height: auto;
-    margin: 0 10vw;
+    margin: 0 16vw;
   }
   .text {
     font-size: 75%;
@@ -52,7 +52,7 @@ export default {
       text-align: center;
     }
     .textProfile {
-      margin: 8%;
+      margin: 18%;
     }
   }
 }
@@ -101,30 +101,24 @@ export default {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .group {
-    display: flex;
+    text-align: center;
     .img {
-      width: 50%;
-    }
-    .name {
-      font-size: 85%;
+      width: 34%;
     }
     .text {
-      font-size: 85%;
+      text-align: left;
+      font-size: 100%;
     }
   }
 }
 @media screen and (min-width: 1024px) {
   .group {
-    display: flex;
+    text-align: center;
     .img {
       width: 25%;
-      height: 25%;
-      margin: 0 12.5%;
-    }
-    .name {
-      font-size: 100%;
     }
     .text {
+      text-align: left;
       font-size: 100%;
     }
   }

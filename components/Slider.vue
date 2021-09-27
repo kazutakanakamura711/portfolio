@@ -38,10 +38,28 @@
               github
             </a>
           </p>
-          <p>Nuxt.js/Vue.js/Illustrator/GarageBand</p>
+          <p>Nuxt.js/Vue.js/vuetify/Illustrator/GarageBand</p>
         </div>
         <a href="https://memory-weakness.herokuapp.com/" target="”_blank”">
           <img src="@/assets/images/nuxtSlot.png" />
+        </a>
+      </slide>
+      <slide>
+        <div class="content">
+          <p>
+            <a href="https://member-list-laravel.herokuapp.com/"
+              >会員リスト</a
+            >
+          </p>
+          <p>
+            <a href="https://github.com/kazutakanakamura711/member-list-laravel" target="”_blank”">
+              github
+            </a>
+          </p>
+          <p>Laravel/PHP/Sass</p>
+        </div>
+        <a href="https://member-list-laravel.herokuapp.com/" target="”_blank”">
+          <img src="@/assets/images/memberListLaravelDemo.png" />
         </a>
       </slide>
       <slide>
