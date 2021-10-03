@@ -49,13 +49,10 @@
         :speed="1000"
       />
     </transition>
+    <Spacer />
+    <ContentTitle :contentTitle="contentTitle.gallery" v-if="show.logo" />
     <transition name="fade">
-      <!-- <Img
-        v-if="show.logo"
-        v-parallax="0.2"
-        class="railroadCrossing"
-        :img="imgs[0]"
-      /> -->
+      <Gallery :imgs="photos"  @click="zoom" class="gallery"/>
     </transition>
     <!-- <div class="flowers">
       <Img v-if="show.logo" v-parallax="0.2" class="flower" :img="imgs[1]" />
@@ -87,14 +84,20 @@ import Carousel from "../components/Slider.vue";
 import Logo from "../components/Logo.vue";
 import Works from "../components/Works.vue";
 import Hamburger from "../components/Hamburger.vue";
+import Gallery from "../components/Gallery.vue";
 export default {
   transition: {
     name: "fade",
     mode: "out-in",
   },
-  components: { Logo, Works, Carousel, Hamburger },
+  components: { Logo, Works, Carousel, Hamburger, Gallery },
   data() {
     return {
+      photos: [
+        require("~/assets/images/alleyRed1.png"),
+        require("~/assets/images/flower.jpg"),
+        require("~/assets/images/firstCollage.jpg"),
+      ],
       imgs: [
         require("~/assets/images/railroadCrossing.png"),
         require("~/assets/images/flowerPink.png"),
@@ -122,6 +125,7 @@ export default {
         profile: "Profile",
         works: "Works",
         contact: "Contact",
+        gallery: "Gallery",
       },
       contents: {
         profile: {
@@ -172,6 +176,9 @@ export default {
         }
       }
     },
+    zoom() {
+
+    }
   },
   mounted() {
     this.mkmessages();
@@ -243,18 +250,5 @@ div {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 }
 @media screen and (min-width: 1024px) {
-  div {
-    margin: 0 auto;
-    .flower,
-    .sakura {
-      img {
-        width: 22vw;
-        height: auto;
-        &:hover {
-          transform: rotate(20deg);
-        }
-      }
-    }
-  }
 }
 </style>
