@@ -33,6 +33,12 @@ export default {
           // dataText: "WORKS",
         },
         {
+          title: "GALLERY",
+          isHover: false,
+          url: "/#gallery",
+          // dataText: "WORKS",
+        },
+        {
           title: "CONTACT",
           isHover: false,
           url: "/#contact",

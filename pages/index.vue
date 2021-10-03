@@ -6,11 +6,10 @@
       <Logo v-if="show.logo" :logo="logo.top" />
     </transition>
     <Spacer />
-    <ContentTitle :contentTitle="contentTitle.profile" v-if="show.logo" />
+    <ContentTitle :contentTitle="contentTitle.profile" v-if="show.logo" id="profile"/>
     <transition name="fade">
       <Profile
         class="profile"
-        id="profile"
         v-if="show.logo"
         :contentTitle="contents.profile.title"
         :contentImg="contents.profile.img"
@@ -26,11 +25,11 @@
       </div> -->
     </transition>
     <Spacer />
-    <ContentTitle :contentTitle="contentTitle.works" v-if="show.logo" />
+    <ContentTitle :contentTitle="contentTitle.works" v-if="show.logo" id="works"
+/>
     <transition name="fade">
       <Works
         class="works"
-        id="works"
         v-if="show.logo"
         :contentTitle="contents.works.title"
         :contentImg="contents.works.img"
@@ -50,7 +49,7 @@
       />
     </transition>
     <Spacer />
-    <ContentTitle :contentTitle="contentTitle.gallery" v-if="show.logo" />
+    <ContentTitle :contentTitle="contentTitle.gallery" v-if="show.logo" id="gallery" />
     <transition name="fade">
       <Gallery :imgs="photos"  @click="zoom" class="gallery"/>
     </transition>
@@ -60,11 +59,9 @@
       <Img v-if="show.logo" v-parallax="0.3" class="flower" :img="imgs[1]" />
     </div> -->
     <Spacer />
-    <ContentTitle :contentTitle="contentTitle.contact" v-if="show.logo" />
+    <ContentTitle :contentTitle="contentTitle.contact" v-if="show.logo"  class="contact" id="contact"/>
     <transition name="fade">
       <Contact
-        class="contact"
-        id="contact"
         v-if="show.logo"
         :contentTitle="contents.contact.title"
         :contentImg="contents.contact.img"
