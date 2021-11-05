@@ -7,7 +7,7 @@
       <div class="text">
         <p :contentTextH1="contentTextH1" class="name">{{ contentTextH1 }}</p>
         <ul>
-          <li v-for="img in imgs" :key="img">
+          <li v-for="img,index in imgs" :key="index">
             <div>
               <img :src="img" alt="" />
             </div>
@@ -35,8 +35,8 @@ ul {
       width: 100%;
       text-align: center;
       img {
-        width: 250px;
-        height: 250px;
+        width: 256px;
+        height: 256px;
         object-fit: cover;
         transition: .3s;
         &:hover {
@@ -46,20 +46,25 @@ ul {
     }
   }
 }
+
 @media screen and(min-width:480px) {
+
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   ul {
     margin: 0 ;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 22vw);
+    grid-template-rows: repeat(3, 22vw);
     justify-content: center;
+    margin: 0 auto;
     li {
       div {
         width: 100%;
         text-align: center;
         img {
-          width: 230px;
-          height: 230px;
+          width: 22vw;
+          height: 22vw;
           object-fit: cover;
           transition: .3s;
           &:hover {
@@ -73,15 +78,18 @@ ul {
 @media screen and (min-width: 1025px) {
   ul {
     margin: 0 ;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 22vw);
+    grid-template-rows: repeat(3, 22vw);
     justify-content: center;
+    margin: 0 auto;
     li {
       div {
         width: 100%;
         text-align: center;
         img {
-          width: 330px;
-          height: 330px;
+          width: 22vw;
+          height: 22vw;
           object-fit: cover;
           transition: .3s;
           &:hover {

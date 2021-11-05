@@ -18,11 +18,11 @@
       />
     </transition>
     <transition name="fade">
-      <!-- <div class="sakuras">
-        <Img v-if="show.logo" v-parallax="0.1" class="sakura" :img="imgs[2]" />
-        <Img v-if="show.logo" v-parallax="0.2" class="sakura" :img="imgs[2]" />
-        <Img v-if="show.logo" v-parallax="0.1" class="sakura" :img="imgs[2]" />
-      </div> -->
+      <div class="sakuras">
+        <Img v-if="show.logo" v-parallax="0.3" class="sakura" :img="imgs[1]" />
+        <Img v-if="show.logo" v-parallax="0.1" class="sakura" :img="imgs[1]" />
+        <Img v-if="show.logo" v-parallax="0.4" class="sakura" :img="imgs[1]" />
+      </div>
     </transition>
     <Spacer />
     <ContentTitle :contentTitle="contentTitle.works" v-if="show.logo" id="works"
@@ -48,16 +48,16 @@
         :speed="1000"
       />
     </transition>
-    <Spacer />
+    <!-- <Spacer /> -->
     <ContentTitle :contentTitle="contentTitle.gallery" v-if="show.logo" id="gallery" />
     <transition name="fade">
-      <Gallery :imgs="photos"  @click="zoom" class="gallery"/>
+      <Gallery :imgs="photos" class="gallery" />
     </transition>
-    <!-- <div class="flowers">
+    <div class="flowers">
       <Img v-if="show.logo" v-parallax="0.2" class="flower" :img="imgs[1]" />
       <Img v-if="show.logo" v-parallax="0.4" class="flower" :img="imgs[1]" />
       <Img v-if="show.logo" v-parallax="0.3" class="flower" :img="imgs[1]" />
-    </div> -->
+    </div>
     <Spacer />
     <ContentTitle :contentTitle="contentTitle.contact" v-if="show.logo"  class="contact" id="contact"/>
     <transition name="fade">
@@ -94,6 +94,12 @@ export default {
         require("~/assets/images/alleyRed1.png"),
         require("~/assets/images/flower.jpg"),
         require("~/assets/images/firstCollage.jpg"),
+        // require("~/assets/images/alleyRed1.png"),
+        // require("~/assets/images/flower.jpg"),
+        // require("~/assets/images/firstCollage.jpg"),
+        // require("~/assets/images/alleyRed1.png"),
+        // require("~/assets/images/flower.jpg"),
+        // require("~/assets/images/firstCollage.jpg"),
       ],
       imgs: [
         require("~/assets/images/railroadCrossing.png"),
@@ -173,9 +179,6 @@ export default {
         }
       }
     },
-    zoom() {
-
-    }
   },
   mounted() {
     this.mkmessages();
@@ -202,7 +205,6 @@ html {
 .fade-leave-to {
   opacity: 0;
 }
-
 div {
   margin: 0 auto;
   .flower,
@@ -242,10 +244,10 @@ div {
 //   background-blend-mode:lighten;
 // }
 
-@media screen and(min-width:480px) {
+@media (min-width:480px) {
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media  (min-width: 768px) and (max-width: 1024px) {
 }
-@media screen and (min-width: 1024px) {
+@media  (min-width: 1024px) {
 }
 </style>
