@@ -191,10 +191,12 @@ export default {
 </script>
 
 <style lang="scss" >
+@import '~assets/scss/variable';
 html {
   scroll-behavior: smooth;
   body {
     margin: 0;
+    color: $mainFontColor;
   }
 }
 .fade-enter-active,

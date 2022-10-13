@@ -62,7 +62,7 @@
           <img src="@/assets/images/memberListLaravelDemo.png" />
         </a>
       </slide>
-      <slide>
+      <!-- <slide>
         <div class="content">
           <p>居酒屋HP</p>
           <s>github</s>
@@ -71,7 +71,7 @@
         <a href="https://sankichi.herokuapp.com/" target="”_blank”">
           <img src="@/assets/images/sankichiDemo.png" />
         </a>
-      </slide>
+      </slide> -->
     </carousel>
   </div>
 </template>
