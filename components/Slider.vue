@@ -40,7 +40,7 @@
           </p>
           <p>Nuxt.js/Vue.js/vuetify/Illustrator/GarageBand</p>
         </div>
-        <a href="https://memory-weakness.herokuapp.com/" target="”_blank”">
+        <a href="https://slot-maschine-nuxt.herokuapp.com/" target="”_blank”">
           <img src="@/assets/images/nuxtSlot.png" />
         </a>
       </slide>
