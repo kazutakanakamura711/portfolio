@@ -23,7 +23,7 @@
           <p>Nuxt.js/Vue.js/Illustrator/GarageBand</p>
         </div>
         <a href="https://memory-weakness.herokuapp.com/" target="”_blank”">
-          <img src="@/assets/images/nuxtMemoryWeakness.png" />
+          <img src="@/assets/images/img-nuxtMemoryWeakness.png" />
         </a>
       </slide>
       <slide>
@@ -41,7 +41,7 @@
           <p>Nuxt.js/Vue.js/vuetify/Illustrator/GarageBand</p>
         </div>
         <a href="https://slot-maschine-nuxt.herokuapp.com/" target="”_blank”">
-          <img src="@/assets/images/nuxtSlot.png" />
+          <img src="@/assets/images/img-nuxtSlot.png" />
         </a>
       </slide>
       <slide>
@@ -59,7 +59,7 @@
           <p>Nuxt.js</p>
         </div>
         <a href="https://member-list-laravel.herokuapp.com/" target="”_blank”">
-          <img src="@/assets/images/programming-go.png" />
+          <img src="@/assets/images/img-programming-go.png" />
         </a>
       </slide>
       <!-- <slide>
@@ -128,6 +128,7 @@ export default {
       margin: 5% 22% 10%;
       width: 56%;
       height: 50%;
+
     }
   }
 }

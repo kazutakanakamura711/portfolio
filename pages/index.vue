@@ -91,9 +91,9 @@ export default {
   data() {
     return {
       photos: [
-        require("~/assets/images/alleyRed1.png"),
-        require("~/assets/images/flower.jpg"),
-        require("~/assets/images/firstCollage.jpg"),
+        require("~/assets/images/img-alleyRed1.png"),
+        require("~/assets/images/img-flower.jpg"),
+        require("~/assets/images/img-firstCollage.jpg"),
         // require("~/assets/images/alleyRed1.png"),
         // require("~/assets/images/flower.jpg"),
         // require("~/assets/images/firstCollage.jpg"),
@@ -112,7 +112,7 @@ export default {
         topImage: true,
       },
       logo: {
-        top: require("~/assets/images/firstCollage.jpg"),
+        top: require("~/assets/images/img-firstCollage.jpg"),
       },
       snsLogo: [
         {
@@ -133,21 +133,21 @@ export default {
       contents: {
         profile: {
           title: "Profile",
-          img: require("~/assets/images/profileImg.jpg"),
+          img: require("~/assets/images/img-profileImg.jpg"),
           textH1: "KAZUTAKA NAKAMURA",
           textP:
             "はじめまして。愛媛県でフロントエンドエンジニアとして活動させていただいております中村と申します。印刷会社を退社後Web制作をさせていただいております。",
         },
         works: {
           title: "Works",
-          img: require("~/assets/images/crane.png"),
+          img: require("~/assets/images/img-crane.png"),
           textH1: "",
           textP:
             "制作物です。神経衰弱やスロットは実際に遊べますので触っていただけたらと思います。今後はドローンを使用した空撮などを含めた制作を行っていこうと思います。",
         },
         contact: {
           title: "Contact",
-          img: require("~/assets/images/contact.png"),
+          img: require("~/assets/images/img-contact.png"),
           textH1: "KAZUTAKA NAKAMURA",
           textP:
             "お問い合わせはTwitterまたはInstagramのDMからお願いいたします。",
