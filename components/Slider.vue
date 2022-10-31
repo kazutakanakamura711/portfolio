@@ -47,6 +47,24 @@
       <slide>
         <div class="content">
           <p>
+            <a href="https://programming-go.herokuapp.com/"
+              >プログラミング思考知育アプリ</a
+            >
+          </p>
+          <p>
+            <a href="https://github.com/kazutakanakamura711/forKids" target="”_blank”">
+              github
+            </a>
+          </p>
+          <p>Nuxt.js</p>
+        </div>
+        <a href="https://member-list-laravel.herokuapp.com/" target="”_blank”">
+          <img src="@/assets/images/programming-go.png" />
+        </a>
+      </slide>
+      <!-- <slide>
+        <div class="content">
+          <p>
             <a href="https://member-list-laravel.herokuapp.com/"
               >会員リスト</a
             >
@@ -61,7 +79,7 @@
         <a href="https://member-list-laravel.herokuapp.com/" target="”_blank”">
           <img src="@/assets/images/memberListLaravelDemo.png" />
         </a>
-      </slide>
+      </slide> -->
       <!-- <slide>
         <div class="content">
           <p>居酒屋HP</p>
