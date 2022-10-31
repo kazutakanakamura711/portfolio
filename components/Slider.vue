@@ -58,7 +58,7 @@
           </p>
           <p>Nuxt.js</p>
         </div>
-        <a href="https://member-list-laravel.herokuapp.com/" target="”_blank”">
+        <a href="https://programming-go.herokuapp.com/" target="”_blank”">
           <img src="@/assets/images/img-programming-go.png" />
         </a>
       </slide>
