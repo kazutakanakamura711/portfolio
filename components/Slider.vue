@@ -132,9 +132,10 @@ export default {
     img {
       cursor: pointer;
       margin: 5% 22% 10%;
-      width: 56%;
-      height: 50%;
-
+      width: 50vw;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
   }
 }
