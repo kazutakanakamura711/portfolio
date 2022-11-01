@@ -113,6 +113,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import '~assets/scss/variable';
 .box {
   position: relative;
   .content {
@@ -122,7 +123,12 @@ export default {
     text-align: center;
   }
   a {
+    color: $mainFontColor;
     text-decoration: none;
+    transition: .3s;
+    &:hover {
+      opacity: .5;
+    }
     img {
       cursor: pointer;
       margin: 5% 22% 10%;
