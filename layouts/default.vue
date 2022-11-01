@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition name="fade">
-      <Hamburger   v-show="isShow" class="hamburBar"  />
+      <Hamburger   v-show="isShow" class="hamburger"  />
     </transition>
     <transition name="fade">
       <Header v-show="isShow" class="menubar" />
@@ -33,5 +33,8 @@ export default {
     .nuxt {
       z-index: 10;
     }
+  }
+  .hamburger {
+    position: fixed;
   }
 </style>
