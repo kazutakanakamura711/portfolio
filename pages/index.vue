@@ -147,7 +147,7 @@ export default {
         },
         contact: {
           title: "Contact",
-          img: require("~/assets/images/img-contact.png"),
+          img: require("~/assets/images/img-contact.jpg"),
           textH1: "KAZUTAKA NAKAMURA",
           textP:
             "お問い合わせはTwitterまたはInstagramのDMからお願いいたします。",
