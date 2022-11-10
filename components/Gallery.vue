@@ -5,7 +5,6 @@
     </div> -->
     <div class="group">
       <div class="text">
-        <p :contentTextH1="contentTextH1" class="name">{{ contentTextH1 }}</p>
         <ul>
           <li v-for="img,index in imgs" :key="index">
             <div>
