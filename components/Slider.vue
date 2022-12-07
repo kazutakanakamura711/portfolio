@@ -8,58 +8,20 @@
       :autoplayTimeout="autoplayTimeout"
       :speed="speed"
     >
-      <slide>
+      <slide v-for="item in slideList" :key="item">
         <div class="content">
           <p>
-            <a href="https://memory-weakness.herokuapp.com/"
-              >神経衰弱アプリ</a
-            >
+            <a :href="item.url" target="_blank" rel="noopener noreferrer">{{
+              item.title
+            }}</a>
           </p>
           <p>
-            <a href="https://github.com/kazutakanakamura711/memoryWeakness" target="”_blank”">
-              github
-            </a>
+            <a :href="item.gitHub" target="”_blank”"> github </a>
           </p>
-          <p>Nuxt.js/Vue.js/Illustrator/GarageBand</p>
+          <p>{{ item.technologyUsed }}</p>
         </div>
-        <a href="https://memory-weakness.herokuapp.com/" target="”_blank”">
-          <img src="@/assets/images/img-nuxtMemoryWeakness.png" />
-        </a>
-      </slide>
-      <slide>
-        <div class="content">
-          <p>
-            <a href="https://slot-maschine-nuxt.herokuapp.com/"
-              >スロットアプリ</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/kazutakanakamura711/slotMaschine" target="”_blank”">
-              github
-            </a>
-          </p>
-          <p>Nuxt.js/Vue.js/vuetify/Illustrator/GarageBand</p>
-        </div>
-        <a href="https://slot-maschine-nuxt.herokuapp.com/" target="”_blank”">
-          <img src="@/assets/images/img-nuxtSlot.png" />
-        </a>
-      </slide>
-      <slide>
-        <div class="content">
-          <p>
-            <a href="https://programming-go.herokuapp.com/"
-              >プログラミング思考知育アプリ</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/kazutakanakamura711/forKids" target="”_blank”">
-              github
-            </a>
-          </p>
-          <p>Nuxt.js</p>
-        </div>
-        <a href="https://programming-go.herokuapp.com/" target="”_blank”">
-          <img src="@/assets/images/img-programming-go.png" />
+        <a :href="item.url" target="”_blank”">
+          <img :src="item.image" />
         </a>
       </slide>
       <!-- <slide>
@@ -102,6 +64,33 @@ export default {
     Carousel,
     Slide,
   },
+  data() {
+    return {
+      slideList: [
+        {
+          title: "神経衰弱アプリ",
+          url: "https://memory-weakness.netlify.app",
+          gitHub: "https://github.com/kazutakanakamura711/memoryWeakness",
+          technologyUsed: "Nuxt.js/Vue.js/Illustrator/GarageBand",
+          image: require("@/assets/images/img-nuxtMemoryWeakness.png"),
+        },
+        {
+          title: "スロットアプリ",
+          url: "https://slot-maschine-nuxt.netlify.app",
+          gitHub: "https://github.com/kazutakanakamura711/slotMaschine",
+          technologyUsed: "Nuxt.js/Vue.js/vuetify/Illustrator/GarageBand",
+          image: require("@/assets/images/img-nuxtSlot.png"),
+        },
+        {
+          title: "プログラミング思考知育アプリ",
+          url: "https://programming-go.netlify.app",
+          gitHub: "https://github.com/kazutakanakamura711/forKids",
+          technologyUsed: "Nuxt.js",
+          image: require("@/assets/images/img-programming-go.png"),
+        },
+      ],
+    };
+  },
   props: {
     perPage: Number,
     autoplay: Boolean,
@@ -113,7 +102,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import '~assets/scss/variable';
+@import "~assets/scss/variable";
 .box {
   position: relative;
   .content {
@@ -125,9 +114,9 @@ export default {
   a {
     color: $mainFontColor;
     text-decoration: none;
-    transition: .3s;
+    transition: 0.3s;
     &:hover {
-      opacity: .5;
+      opacity: 0.5;
     }
     img {
       cursor: pointer;
